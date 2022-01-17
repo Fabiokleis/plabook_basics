@@ -1,2 +1,2 @@
 # Playbook basics
-A list of yml example contructors to playbooks.
+A list of yml contructors examples to playbooks.
