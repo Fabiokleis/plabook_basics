@@ -1,0 +1,11 @@
+---
+- name:
+  hosts: all
+  vars_file: # para setar arquivos de configuracao de variaveis
+    - config.yml
+  tasks:
+    - name: criando o usuario
+      become: true
+      user: # modulo user
+        name: "{{ user_name }}"  ## dereference variable
+

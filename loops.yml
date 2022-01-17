@@ -1,0 +1,13 @@
+---
+- name: Ensure users
+  hosts: localhost
+  become: yes
+
+  tasks:
+    - name: Ensure user is present
+      user:
+        name: "{{ item }}"
+        state: present
+      loop:
+        - urameshi
+        - root

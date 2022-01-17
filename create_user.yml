@@ -1,0 +1,13 @@
+---
+- name:
+  hosts: all
+  vars:
+    - server_name: servidor01
+    - user_name: analistadevops
+    - conf_file: /opt/app/app.conf
+  tasks:
+    - name: criando o usuario
+      become: true
+      user: # modulo user
+        name: "{{ user_name }}"  ## dereference variable
+
